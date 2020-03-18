@@ -1,8 +1,10 @@
 #### client-server mode ipc using unix socket 
 ----
 #### build
+> + 
 > + make clean 
-> + make 
+> + make or make CC=gcc
+>>      default CC=arm-linux-gnueabihf-gcc
 
 > directory build/include and build/lib will be produced which store release header and libararies
 

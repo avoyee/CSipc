@@ -3,8 +3,8 @@
 CFLAGS = -g -fPIC -rdynamic -funwind-tables -D_GNU_SOURCE -D__WITH_MURMUR
 TOOL_CHAIN = arm-linux-gnueabihf-
 #TOOL_CHAIN = 
-CC = $(TOOL_CHAIN)gcc
-AR = $(TOOL_CHAIN)ar
+CC := $(TOOL_CHAIN)gcc
+AR = $(patsubst %gcc,%,$(CC))ar
 
 
 libinc = `pwd`/build/include
